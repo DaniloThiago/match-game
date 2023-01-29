@@ -1,6 +1,5 @@
-.board-game {
+.score-board {
   display: flex;
   justify-content: space-evenly;
-  flex-wrap: wrap;
-  gap: 20px;
+  padding: 2.5rem 0;
 }
