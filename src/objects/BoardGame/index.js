@@ -1,12 +1,13 @@
 import "./style.css"
+import cards from "./data"
 import CarFrontback from "../../components/CardFrontBack"
 
 function BoardGame(amountCards = 2) {
-  const $htmlCardFrontBack = CarFrontback();
-  const $htmlContent = $htmlCardFrontBack.repeat(amountCards)
+  const htmlCardList = cards.map((card) => CarFrontback(card.icon, cards.altIcon))
+  const $htmlCards = htmlCardList.join('')
   return `
     <section class="board-game">
-      ${$htmlContent}
+      ${$htmlCards}
     </section>
     `
 }
